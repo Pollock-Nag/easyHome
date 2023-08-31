@@ -26,12 +26,12 @@ export const makeBooking = async (id, data) => {
 };
 
 export const updatePosts = async (id, data) => {
-  console.log(id, data);
+  // console.log(id, data);
   const response = await axios.put(`${BASE_URL}/dailyhouse/${id}`, data);
   return response.data;
 };
 export const rejectRequest = async (id, data) => {
-  console.log(id, data);
+  // console.log(id, data);
   const response = await axios.put(
     `${BASE_URL}/dailyhouse/booking/reject/${id}`,
     data
@@ -39,7 +39,7 @@ export const rejectRequest = async (id, data) => {
   return response.data;
 };
 export const acceptRequest = async (id, data) => {
-  console.log(id, data);
+  // console.log(id, data);
   const response = await axios.put(
     `${BASE_URL}/dailyhouse/booking/accept/${id}`,
     data

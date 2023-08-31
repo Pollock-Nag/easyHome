@@ -66,8 +66,9 @@ function BookingRequest({ house, bookerid }) {
         const data = { bookerid: bookerid };
         console.log(house._id, data);
         rejectRequest(house._id, data).then((res) => {
-          console.log(res);
+          // console.log(res);
         });
+
         dispatch(retriveAllHouses());
       }
     });

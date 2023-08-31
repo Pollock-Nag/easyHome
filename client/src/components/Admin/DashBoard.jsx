@@ -86,6 +86,7 @@ function DashBoard() {
                 <div className="absolute ml-[28vw]  bottom-[35vh] ">
                   <select
                     className="select w-[9vw] select-sm select-secondary max-w-xs "
+                    defaultValue={'Select Month'}
                     onChange={(e) => setMonthname(e.target.value)}
                   >
                     <option disabled selected>

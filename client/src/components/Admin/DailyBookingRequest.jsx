@@ -16,9 +16,9 @@ function DailyBookingRequest({ house, bookerid }) {
 
   useEffect(() => {
     if (bookerid !== undefined) {
-      console.log('Booking id', bookerid);
+      // console.log('Booking id', bookerid);
       getUserByID(bookerid).then((res) => {
-        console.log(res);
+        // console.log(res);
         setBooker(res);
       });
     }

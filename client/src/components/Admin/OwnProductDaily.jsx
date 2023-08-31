@@ -33,25 +33,39 @@ function OwnProductDaily() {
           </div>
 
           {/* Each property cart */}
-
           {dailyHouseList
             .filter((house) => {
               return house.postby === loggedInUsers[0]._id;
             })
             .filter((house) => {
               return house.isbooked === false;
-            })
+            }).length > 0 ? (
+            <>
+              {dailyHouseList
+                .filter((house) => {
+                  return house.postby === loggedInUsers[0]._id;
+                })
+                .filter((house) => {
+                  return house.isbooked === false;
+                })
 
-            .map((house, i) => {
-              return (
-                <>
-                  <EachProductCardDaily
-                    house={house}
-                    availablity={house.isavailable}
-                  />
-                </>
-              );
-            })}
+                .map((house, i) => {
+                  return (
+                    <>
+                      <EachProductCardDaily
+                        house={house}
+                        availablity={house.isavailable}
+                      />
+                    </>
+                  );
+                })}
+            </>
+          ) : (
+            <>
+              <div>You do not make any daily basis post yet</div>
+            </>
+          )}
+
           {/* <EachProductCard />
           <EachProductCard /> */}
         </div>

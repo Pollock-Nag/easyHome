@@ -42,7 +42,7 @@ function EachProductCardDaily({ house, availablity }) {
                   <input
                     type="checkbox"
                     className="toggle toggle-success"
-                    checked={isAvailable}
+                    defaultChecked={isAvailable}
                     onClick={handleAvailablityToggle}
                   />
                 </div>
